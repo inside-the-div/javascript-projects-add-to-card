@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+.project-body{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.add-to-cart-container{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+   
+}
+.cart-body{
+    position: relative;
+}
+.cart-list{
+    position: fixed;
+    height: 700px;
+    width: 500px;
+    padding: 10px;
+    background-color: #e8e5e5;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    right: 0;
+    top: 65px;
+    transition: 0.5s;
+}
+.cart-slide-right{
+    right: -500px;
+}
+.cart-list-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-list-head i{
+    cursor: pointer;
+    font-size: 25px;
+    transition: .4s;
+}
+.cart-list-head i:hover{
+    color: #ff0000;
+}
+.cart-head{
+    background-color: #c8c7c7;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.tool-error-message{
+    display: block;
+    color: red;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 800;
+    margin: 5px 0 0 5px;
+    position: absolute;
+    bottom: -15px;
+    left: 0px;
+}
+.tool-error-border{
+    border: 2px solid red;
+}
+.btn-common-project{
+    display: block;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    background-color: rgb(0, 128, 0);
+    color: rgb(255, 255, 255);
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    min-width: 65px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.add-to-cart-title{
+    text-align: center;
+    font-size: 25px;
+}
+.add-to-cart-right{
+    display: flex;
+    align-items: center;
+}
+.input-box-common-project{
+    height: 40px;
+    width: 100%;
+    background-color: rgba(240, 248, 255, 0.569);
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px 0 5px 5px;
+    outline: none;
+    font-size: 20px;
+}
+.cart-products-body{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cart-product{
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #000000;
+}
+.cart-product-head{
+    width: 100%;
+    margin-bottom: 5px;
+}
+.cart-product-head img{
+    width: 100%;
+}
+.product-name{
+    margin-bottom: 5px;
+}
+.product-action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-action button{
+    margin-right: 0;
+}
+#btn-cart-list-show-hide{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: none;
+    color: #000000;
+}
+.btn-cart-list-show-hide:hover{
+    color: #0707e4;
+}
+.cart-list{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.product-list-table table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.product-list-table table thead tr th,td{
+    height: 40px;
+    padding: 5px;
+    border: none;
+    text-align: start;
+}
+
+.btn-remove-from-cart-list{
+    background: transparent;
+    box-shadow: none;
+}
+.btn-remove-from-cart-list:hover i{
+    color: #ff0000;
+}
+.btn-remove-from-cart-list i{
+    color: #000000;
+}
+.product-quantity{
+    margin: 2px;
+    padding: 3px 10px;
+    border: 1px solid #000000;
+}
+.btn-product-quantity-minus,.btn-product-quantity-plus{
+    display: inline-block;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-product-quantity-plus:hover,.btn-product-quantity-minus:hover{
+    color: #0707e4;
+}
+
+.alert-toaster{
+    position: fixed;
+    top: 10px;
+    left: 0px;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    box-shadow: 0px 0px 7px 1px #a3a3a3;
+    border-radius: 5px;
+    display: none;
+}
+.alert-bg-error{
+    background: #ff0000;
+}
+.alert-bg-error p{
+    color: #fff;
+}
+.alert-bg-success{
+    background: #00ff77;
+}
+.alert-bg-success p{
+    color: #000000;
+}
