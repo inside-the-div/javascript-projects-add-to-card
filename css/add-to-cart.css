@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
+
 .project-body{
     position: relative;
     display: flex;
@@ -39,6 +40,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.cart-list-head h2{
+    font-size: 20px;
 }
 .cart-list-head i{
     cursor: pointer;
@@ -117,7 +121,10 @@
     width: 300px;
     padding: 10px;
     margin: 10px;
-    border: 2px solid #000000;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.cart-product:hover{
+    box-shadow: rgba(0, 0, 0, 0.70) 0px 3px 8px;
 }
 .cart-product-head{
     width: 100%;
@@ -192,8 +199,8 @@
 
 .alert-toaster{
     position: fixed;
-    top: 10px;
-    left: 0px;
+    bottom: 10px;
+    right: 10px;
     box-sizing: border-box;
     padding: 20px 15px;
     box-shadow: 0px 0px 7px 1px #a3a3a3;

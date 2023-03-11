@@ -51,7 +51,6 @@ $(document).ready(function(){
             cartListJson = JSON.parse(localStorage.getItem("cartList_data"));
             for(var i = 0; i < cartListJson.cartListArray.length; i++)
             {
-                console.log(cartListJson.cartListArray[i].productId);
                 if(cartProductId == cartListJson.cartListArray[i].productId)
                 {
                     productAlreadyInCartList = true;
@@ -112,6 +111,12 @@ $(document).ready(function(){
             }
             cartListJson.cartListArray.splice(indexNumber, 1);
             localStorage.setItem("cartList_data", JSON.stringify(cartListJson));
+            $("#alertToaster").html('<p>Product removed from the cart.</p>');
+            $("#alertToaster").removeClass('alert-bg-success');
+            $("#alertToaster").addClass('alert-bg-error');
+            $("#alertToaster").fadeIn();
+
+                setTimeout(removeAlertToaster, 3000);
             LoadCartList();
         }
     });
@@ -141,6 +146,13 @@ $(document).ready(function(){
             product.price = productUnitPrice * product.quantity;
             localStorage.setItem("cartList_data", JSON.stringify(cartListJson));
             LoadCartList();
+
+            $("#alertToaster").html('<p>Product quantity decress.</p>');
+            $("#alertToaster").removeClass('alert-bg-success');
+            $("#alertToaster").addClass('alert-bg-error');
+            $("#alertToaster").fadeIn();
+
+            setTimeout(removeAlertToaster, 3000);
         }
     });
 
@@ -170,7 +182,13 @@ $(document).ready(function(){
 
         localStorage.setItem("cartList_data", JSON.stringify(cartListJson));
         LoadCartList();
-    });
+
+        $("#alertToaster").html('<p>Product quantity incress.</p>');
+        $("#alertToaster").addClass('alert-bg-success');
+        $("#alertToaster").fadeIn();
+
+        setTimeout(removeAlertToaster, 3000);
+});
 
     //search Product
     $("#searchProduct").keyup(function(){
